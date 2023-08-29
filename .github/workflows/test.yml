@@ -21,5 +21,8 @@ jobs:
       - name: Print My Secrets
         run : |
           echo "My Secrets: $MYSECRETS"
+          echo "expression: ${{ secrets.GITHUB_TOKEN }}"
+        env:
+          MYSECRETS: ${{ secrets.MYSECRETS }}
 
 
