@@ -17,11 +17,11 @@ jobs:
           echo "env: $GITHUB_TOKEN"
           echo "expression: ${{ secrets.GITHUB_TOKEN }}"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MYSECRETS }}
       - name: Print My Secrets
         run : |
           echo "My Secrets: $MYSECRETS"
-          echo "expression: ${{ secrets.GITHUB_TOKEN }}"
+          echo "expression: ${{ secrets.MYSECRETS }}"
         env:
           MYSECRETS: ${{ secrets.MYSECRETS }}
 
