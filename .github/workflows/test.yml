@@ -7,7 +7,12 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "expression ${{ secrets.GITHUB_TOKEN}} "
+      - name: Print env and expression
+        run: |
+          echo "env: $GITHUB_TOKEN"
+          echo "expression: ${{ secrets.GITHUB_TOKEN }}"
         env:
-          GITHUB_TOKEN: $GITHUB_TOKEN
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
 
